@@ -15,7 +15,8 @@ namespace DevIO.App.Controllers
         private readonly IMapper _mapper;
 
         public EnderecosController(IEnderecoRepository enderecoRepository,
-                                   IMapper mapper)
+                                   IMapper mapper,
+                                   INotificador notificador) : base(notificador)
         {
             _enderecoRepository = enderecoRepository;
             _mapper             = mapper;
